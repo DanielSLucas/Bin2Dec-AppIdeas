@@ -1,0 +1,84 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retangulo {
+  height: 200px;
+  width: 300px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px gray;
+}
+
+.retangulo header {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.retangulo strong {
+  font-size: 28px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.retangulo form {
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.retangulo form input {
+  height: 30px;
+  font-size: large;
+  text-align: center;
+  border: darkgrey 1px solid;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.retangulo form button {
+  height: 30px;
+  border: blue 1px solid;
+  border-radius: 5px;
+  background: aliceblue;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.retangulo form button:active {
+  background-color:deepskyblue;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.retangulo p {
+  font-size: larger;
+  font-weight: bold;
+}
+
