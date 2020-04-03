@@ -19,12 +19,26 @@ class App extends React.Component {
     const binLength = binario.length;
     let deci = 0
 
+    //10 = [1*(2^1)] + [0*(2^0)] = 2
+
     let i = binLength -1;
     let n = 0;
 
     while (i !== -1) {
+      const digito = Number(binario[i])
 
-      deci += (Number(binario[i]) * (2 ** n))
+      if(digito !== 0 && digito !== 1) {
+        this.setState({
+          binario: '',
+          decimal: '',
+        })
+        
+        alert("Entre apenas com 0 e 1")
+
+        return window.location.reload();
+      }
+
+      deci += (digito * (2 ** n));
 
       i--;
       n++;
@@ -47,19 +61,27 @@ class App extends React.Component {
             {/* Input para entrada do número binário */}
             <input 
               type="text"
+              value={this.state.binario}
               onChange={ e => this.setState({binario: e.target.value})}
-              maxLength={8}
+              // maxLength={8}
             />
 
             <button type="submit" >Converter</button>
+            
+            <input 
+              type="text"
+              value={this.state.decimal}
+              onChange={ e => this.setState({binario: e.target.value})}
+              disabled
+            />
 
           </form>
 
-          {/* <p> {this.state.binario} -> {this.state.decimal}</p> */}
+          
 
-          {this.state.decimal && (
+          {/* {this.state.decimal && (
             <p>{this.state.decimal}</p>
-          )}
+          )} */}
 
         </div>
       </div>
